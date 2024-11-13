@@ -1,0 +1,16 @@
+services:
+    ait-week7:
+        build:
+          context: .
+          dockerfile: Dockerfile-compose
+        image: ait-week7:latest
+        # using prebuild image
+        # image: worrarat1/ait-week7
+        environment:
+            PYTHONUNBUFFERED: 1
+        command: fastapi run --reload
+        ports:
+            - 5000:8000
+        restart: always
+        volumes:
+          - ./app:/usr/src/app
