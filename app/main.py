@@ -30,7 +30,6 @@ async def detection(image: UploadFile,
             confidence = round(box.conf.squeeze().tolist(), 2)
             obj_class = int(box.cls[0])
             label = model.names[obj_class]
-            # skip if obj is not person
             if obj_class != class_id:
                 continue
             resp["object"].append({"bbox": {"x1": int(x1), "y1": int(y1), "x2": int(x2), "y2": int(y2)}, 
