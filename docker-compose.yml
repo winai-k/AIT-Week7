@@ -3,9 +3,9 @@ services:
         build:
           context: .
           dockerfile: Dockerfile-compose
-        image: ait-week7:latest
+        # image: ait-week7:latest
         # using prebuild image
-        # image: worrarat1/ait-week7
+        image: worrarat1/ait-week7:1.0
         environment:
             PYTHONUNBUFFERED: 1
         command: fastapi run --reload
