@@ -5,7 +5,7 @@ services:
           dockerfile: Dockerfile-compose
         # image: ait-week7:latest
         # using prebuild image
-        image: worrarat1/ait-week7:1.0
+        image: winai-k/ait-week7
         environment:
             PYTHONUNBUFFERED: 1
         command: fastapi run --reload
@@ -14,10 +14,10 @@ services:
         restart: always
         volumes:
           - ./app:/usr/src/app
-        deploy:
-          resources:
-              reservations:
-                devices:
-                  - driver: nvidia
-                    count: "all"
-                    capabilities: [gpu]
+      # deploy:
+      #   resources:
+      #       reservations:
+      #         devices:
+      #           - driver: nvidia
+      #             count: "all"
+      #             capabilities: [gpu]
