@@ -1,5 +1,6 @@
 from fastapi import FastAPI, File, UploadFile, Path, Query
-from ultralytics import YOLO
+# from ultralytics 
+import YOLO
 import cv2
 import numpy as np
 from io import BytesIO

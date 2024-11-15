@@ -5,7 +5,7 @@ services:
           dockerfile: Dockerfile-compose
         # image: ait-week7:latest
         # using prebuild image
-        image: winai-k/ait-week7
+        image: winai-k/ait-week7:latest
         environment:
             PYTHONUNBUFFERED: 1
         command: fastapi run --reload
